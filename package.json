@@ -1,0 +1,19 @@
+{
+  "name": "serverless-http-tests",
+  "version": "0.0.1",
+  "description": "Tests for serverless-http in various serverless configurations",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "XuluWarrior",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "serverless-http": "^1.5.5"
+  },
+  "devDependencies": {
+    "serverless-domain-manager": "^2.3.6",
+    "serverless-offline": "^3.18.0"
+  }
+}
