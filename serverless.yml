@@ -35,6 +35,7 @@ plugins:
 custom:
   customDomain:
     domainName: 'api.xuluwarrior.org' # Change this to your domain.
-    basePath: 'base' # This will be prefixed to all routes
+    basePath: 'serverless-http-tests' # This will be prefixed to all routes
     stage: ${self:provider.stage}
     createRoute53Record: true
+
