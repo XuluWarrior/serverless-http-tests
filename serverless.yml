@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: serverless-http-tests
+service: serverless-http-tests-use-baseurl
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
@@ -35,7 +35,7 @@ plugins:
 custom:
   customDomain:
     domainName: 'api.xuluwarrior.org' # Change this to your domain.
-    basePath: 'serverless-http-tests' # This will be prefixed to all routes
+    basePath: 'serverless-http-tests-use-baseurl' # This will be prefixed to all routes
     stage: ${self:provider.stage}
     createRoute53Record: true
 

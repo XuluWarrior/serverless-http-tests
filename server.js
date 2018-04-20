@@ -2,11 +2,11 @@ const serverless = require('serverless-http');
 const express = require('express');
 const app = express();
 
-app.get('/serverless-http-tests', (req, res) => {
+app.get('/serverless-http-tests-use-baseurl', (req, res) => {
     const {baseUrl, originalUrl, url} = req;
     res.send({baseUrl, originalUrl, url});
 });
-app.use('/serverless-http-tests/static', express.static('public'));
+app.use('/serverless-http-tests/static-use-baseurl', express.static('public'));
 
 module.exports.handler = serverless(app);
 
