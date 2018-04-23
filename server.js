@@ -12,6 +12,14 @@ router.get('/serverless-http-tests-koa', (ctx) => ctx.body = ctx);
 //router.get('/serverless-http-tests-koa/static/*', serve('./public'));
 
 app.use(json());
+
+// Hack to force originalUrl to match value set by serverless-http
+app.use((ctx, next) => {
+    return next().then((ctx) => {
+        ctx.originalUrl = ctx.req.originalUrl || ctx.originalUrl;
+    })
+});
+
 app.use(router.routes());
 
 module.exports.handler = serverless(app);
