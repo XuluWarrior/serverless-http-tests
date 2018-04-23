@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: serverless-http-tests-use-baseurl
+service: serverless-http-tests-koa
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
@@ -19,7 +19,7 @@ service: serverless-http-tests-use-baseurl
 
 provider:
   name: aws
-  runtime: nodejs6.10
+  runtime: nodejs8.10
 
 functions:
   app:
@@ -35,7 +35,7 @@ plugins:
 custom:
   customDomain:
     domainName: 'api.xuluwarrior.org' # Change this to your domain.
-    basePath: 'serverless-http-tests-use-baseurl' # This will be prefixed to all routes
+    basePath: 'serverless-http-tests-koa' # This will be prefixed to all routes
     stage: ${self:provider.stage}
     createRoute53Record: true
 

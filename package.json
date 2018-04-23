@@ -9,7 +9,10 @@
   "author": "XuluWarrior",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3",
+    "koa": "^2.5.0",
+    "koa-json": "^2.0.2",
+    "koa-router": "^7.4.0",
+    "koa-router-static": "^1.2.0",
     "serverless-http": "git+https://github.com/XuluWarrior/serverless-http.git##35-BASEURL"
   },
   "devDependencies": {

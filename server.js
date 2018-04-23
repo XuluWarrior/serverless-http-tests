@@ -1,12 +1,18 @@
 const serverless = require('serverless-http');
-const express = require('express');
-const app = express();
+//const serve = require('koa-router-static');
+const json = require('koa-json');
 
-app.get('/serverless-http-tests-use-baseurl', (req, res) => {
-    const {baseUrl, originalUrl, url} = req;
-    res.send({baseUrl, originalUrl, url});
-});
-app.use('/serverless-http-tests/static-use-baseurl', express.static('public'));
+const Koa = require('koa');
+const Router = require('koa-router');
+const app = new Koa();
+const router = new Router();
+
+
+router.get('/serverless-http-tests-koa', (ctx) => ctx.body = ctx);
+//router.get('/serverless-http-tests-koa/static/*', serve('./public'));
+
+app.use(json());
+app.use(router.routes());
 
 module.exports.handler = serverless(app);
 
