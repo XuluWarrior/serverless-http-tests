@@ -13,4 +13,6 @@ module.exports.handler = (...args) => {
     return handler(...args);
 }
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+if (!process.env.IS_SERVERLESS) {
+    app.listen(3000, () => console.log('Example app listening on port 3000!'));
+}
