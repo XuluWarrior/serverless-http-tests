@@ -10,10 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "express": "4.17.1",
-    "serverless-http": "^1.5.5"
+    "serverless-http": "2.3.2"
   },
   "devDependencies": {
     "serverless-domain-manager": "4.0.0",
-    "serverless-offline": "^3.18.0"
+    "serverless-offline": "5.12.1"
   }
 }
