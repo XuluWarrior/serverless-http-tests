@@ -8,6 +8,9 @@ app.get('/serverless-http-tests', (req, res) => {
 });
 app.use('/serverless-http-tests/static', express.static('public'));
 
-module.exports.handler = serverless(app);
+const handler = serverless(app);
+module.exports.handler = (...args) => {
+    return handler(...args);
+}
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
